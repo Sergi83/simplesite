@@ -1,0 +1,75 @@
+// mixins and templates
+@import '../variables_mixins';
+
+
+
+
+// * HEADER
+
+
+#header-wrapper {
+    background: url(../../styles/images/nasa-earth-view.jpg) no-repeat center center fixed;
+    height: 100%;
+    overflow: hidden;
+    // * or
+    // background: url(../../styles/images/nasa-earth-view.jpg) no-repeat center;
+    // background-size: auto 100%;
+}
+
+.container {
+    margin: 0 auto;
+    box-sizing: border-box;
+    text-align: center;
+    width: 80%;
+}
+
+#header {
+    position: relative;
+    height: 80%;
+
+    a {
+        text-decoration: none;
+        color: $color-white;
+    }
+}
+
+#logo {}
+
+#menu {
+    ul {
+        display: inline-block;
+        padding: 0;
+    }
+
+    // display, float, margin, padding, text parameters
+    @extend %menu-li-a;
+
+    a:hover {
+        @include background-brdradius($base-color, 30px);
+    }
+
+    .current_page_item {
+        @include background-brdradius($button-color, 30px);
+    }
+}
+
+// end of #menu
+
+#header-featured {
+    padding: 5em 0;
+}
+
+#banner {
+    overflow: hidden;
+    width: 75%;
+
+    strong {
+        // using font-weight map with variable 'bolder'
+        font-weight: $font-bolder;
+        color: $color-white;
+    }
+
+    a {
+        color: $banner-links-color;
+    }
+}

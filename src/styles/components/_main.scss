@@ -1,0 +1,120 @@
+// 
+@import '../variables_mixins';
+
+// * MAIN
+
+.wrapper {
+    background: $color-white;
+}
+
+#page {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    padding: 6em 0;
+}
+
+
+// content
+
+#content {}
+
+.title {
+    margin-bottom: 3em;
+
+    .byline {
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        @include fontz(400, 1.1em);
+        color: $byline-color;
+    }
+}
+
+.image-full {
+    display: block;
+    width: 100%;
+    margin: 0 0 2em 0;
+}
+
+.image {
+    background: $background-dark;
+}
+
+
+// sidebar
+
+#sidebar {
+    ul {
+        margin: 0;
+    }
+}
+
+// sidebar upper section
+.style1 {
+    // overflow: hidden;
+    color: $base-color;
+
+    // li:first-child clear top padding, border
+    @extend %sidebar-li-first;
+
+    li {
+        padding: 2.8em 0;
+        border-top: 1px solid $underline-color;
+    }
+
+    h5 {
+        padding: 1.2em 0 1em 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+// sidebar lower section
+#stwo-col {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2em;
+    text-align: left;
+    justify-content: space-between;
+
+    .sbox1,
+    .sbox2 {
+        margin-bottom: 2em;
+
+        a {
+            margin-left: 1em;
+        }
+    }
+
+    .sbox1 {
+        float: left;
+    }
+
+    .sbox2 {
+        float: right;
+    }
+
+    h5 {
+        display: block;
+        padding-bottom: 1.5em;
+    }
+
+    .style2 {
+        margin: 0;
+        padding-top: 1em;
+        @extend %sidebar-li-first;
+
+        li {
+            padding: 0.8em 0;
+            border-top: 1px solid #e5e5e5;
+        }
+    }
+}
+
+// end of #stwo-col

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../styles/images/computer_logo_icon.svg';
 
 
 export default function Navbar() {
@@ -9,8 +10,9 @@ export default function Navbar() {
             {/* Logo */}
             <div id="logo">
                 <Link to='/'>
-                    {/* <img src={logo} alt='logo' className='logo' /> */}
-                    <h1>Simplesite</h1>
+                    {logo
+                    ? <img src={logo} alt='computer logo' className='logo' />
+                    : <h1>Simplesite</h1>}
                 </Link>
             </div>
 

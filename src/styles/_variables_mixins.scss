@@ -1,0 +1,121 @@
+// colors
+$color-white: #fff;
+$base-color: #6c6c6c;
+
+$h3-color: #323232;
+$h5-color: #454445;
+
+$a-color: #525252;
+
+$banner-text-color: rgba(255, 255, 255, 0.808);
+$banner-links-color: rgba(255, 255, 255, 0.959);
+$button-color: #1757ae;
+
+$byline-color: #6f6f6f;
+$underline-color: #d1cfce;
+
+$background-dark: #2b2b2b;
+$footer-color: rgba(255, 255, 255, 0.3);
+$footer-link: rgba(255, 255, 255, 0.6);
+
+
+// font-size
+// $fz-menu: 1em;
+
+// create variables for font-weight map
+$font-thin: 300;
+$font-norm: 400;
+$font-bold: 600;
+$font-bolder: 700;
+
+
+
+// * templates
+
+//  %tmpl{...} -> @extend %tmpl
+// add to list styles
+%ul-li-base-mg-bl {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+// sidebar template (upper part)
+// 
+%sidebar-li-first {
+    li:first-child {
+        padding-top: 0;
+        border-top: 0;
+    }
+}
+
+// menu list item and link style template
+%menu-li-a {
+    li {
+        display: block;
+        text-align: center;
+    }
+
+    a {
+        display: inline-block;
+        margin-left: 1px;
+        padding: 1em 1.5em 1em 1.5em;
+        letter-spacing: 0.10em;
+        font-size: 1em;
+        text-transform: uppercase;
+        outline: 0;
+    }
+}
+
+
+// * mixins 
+
+// font-weight and size for h1-5 and buttons
+@mixin fontz($fw, $fz) {
+    font-size: $fz;
+    font-weight: $fw;
+}
+
+// position + top
+@mixin pos-top($pos, $top) {
+    position: $pos;
+    top: $top;
+}
+
+// float + width
+@mixin float-width($float, $width) {
+    float: $float;
+    width: $width;
+}
+
+// float + width (calculated) +         text-align;
+// width formula: ('width-main' * 'x%') / ('width-main' + 'width-side')
+@mixin float-text-width($float, $text-a, $w-main, $w-side, $percent) {
+    float: $float;
+    width: (($w-main * $percent) / ($w-main + $w-side));
+    text-align: $text-a;
+}
+
+// menu button style (+hover)
+@mixin background-brdradius($background, $brdradius) {
+    background-color: $background;
+    border-radius: $brdradius;
+}
+
+
+// * media queries (conditions)
+// queue of media queries: should be the same order as in the mixin
+@mixin for-size($size) {
+    @if $size==phone-only {
+        @media (max-width: 649px) { @content; }
+    }
+    @else if $size==tablet-portrait-up {
+        @media (min-width: 650px) { @content; }
+    }
+    @else if $size==tablet-landscape-up {
+        @media (min-width: 905px) { @content; }
+    }
+    @else if $size==desktop-up {
+        @media (min-width: 1300px) { @content; }
+    }
+}

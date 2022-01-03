@@ -1,0 +1,108 @@
+@import '../variables_mixins';
+
+// * HEADER
+
+
+#header-wrapper {
+    @include for-size(tablet-landscape-up) {
+        overflow: auto;
+    }
+}
+
+.container {
+    @include for-size(desktop-up) {
+        width: 1200px;
+    }
+}
+
+#header {
+    @include for-size(desktop-up) {
+        display: flex;
+        justify-content: space-between;
+        height: 150px;
+    }
+}
+
+#logo {
+    @include for-size(phone-only) {
+        top: 2em;
+
+        a {
+            font-size: 1em;
+        }
+    }
+
+    @include for-size(tablet-portrait-up) {
+        // position: relative;
+        // top: 2em;
+        @include pos-top(relative, 2em);
+    }
+
+    @include for-size(tablet-landscape-up) {
+        @include pos-top(relative, 3em);
+    }
+
+    @include for-size(desktop-up) {
+        @include pos-top(absolute, 6em);
+    }
+}
+
+#menu {
+    @include for-size(phone-only) {
+        // display: none;
+
+        li {
+            float: none;
+        }
+    }
+
+    @include for-size(tablet-portrait-up) {
+        @include pos-top(relative, 3em);
+    }
+
+    @include for-size(tablet-landscape-up) {
+        ul {
+            display: flex;
+            align-content: space-around;
+        }
+    }
+
+    @include for-size(desktop-up) {
+        @include pos-top(absolute, 6em);
+        right: 0;
+    }
+}
+
+#header-featured {
+    @include for-size(phone-only) {
+        width: auto;
+    }
+
+    @include for-size(desktop-up) {
+        padding: 10em 0;
+    }
+}
+
+#banner {
+    @include for-size(phone-only) {
+        width: 85%;
+
+        h2 {
+            font-size: 3.5em;
+            padding-bottom: 0.3em;
+        }
+
+        h4 {
+            font-size: 1.3em;
+        }
+
+        .button {
+            font-size: 1.3em;
+            border-radius: 42px;
+        }
+    }
+
+    @include for-size(desktop-up) {
+        width: 1000px;
+    }
+}

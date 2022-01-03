@@ -1,0 +1,74 @@
+// 
+@import '../variables_mixins';
+
+
+
+// * MAIN
+
+#page {
+    @include for-size(tablet-landscape-up) {
+        justify-content: space-between;
+    }
+
+    @include for-size(desktop-up) {
+        justify-content: space-between;
+    }
+}
+
+#content {
+    @include for-size(tablet-landscape-up) {
+        // ($float, $text-a, $w-main, $w-side, $percent)
+        // width formula: ('width-main' * 'x%') / ('width-main' + 'width-side')
+        @include float-text-width(left, left, 700px, 450px, 80%);
+    }
+
+    @include for-size(desktop-up) {
+        @include float-text-width(left, left, 700px, 450px, 90%);
+    }
+}
+
+#sidebar {
+    @include for-size(phone-only) {
+
+        #stwo-col,
+        .style1 {
+            justify-content: space-around;
+        }
+    }
+
+    @include for-size(tablet-portrait-up) {
+
+        #stwo-col,
+        .style1 {
+            justify-content: space-around;
+        }
+
+        .style1 {
+            margin: auto 5%;
+        }
+    }
+
+    @include for-size(tablet-landscape-up) {
+        @include float-text-width(left, left, 700px, 450px, 80%);
+
+        .style1 {
+            margin: auto 5%;
+        }
+    }
+
+    @include for-size(desktop-up) {
+        @include float-text-width(right, left, 450px, 700px, 90%);
+    }
+}
+
+// end of #sidebar
+
+#stwo-col {
+    @include for-size(desktop-up) {
+
+        .sbox1,
+        .sbox2 {
+            width: 210px;
+        }
+    }
+}

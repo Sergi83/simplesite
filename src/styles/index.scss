@@ -1,0 +1,41 @@
+// clear styles
+@import './base/reset';
+
+/* 
+====== 
+Variables,
+Global Styles, Buttons
+======
+*/
+@import './variables_mixins';
+
+@import './base/base';
+
+/* 
+====== 
+Headers
+======
+*/
+@import './components/header';
+
+/* 
+====== 
+Main
+======
+*/
+@import './components/main';
+
+/* 
+====== 
+Footer
+======
+*/
+@import './components/footer';
+
+/* 
+====== 
+Media Queries
+======
+*/
+@import './mediaQueries/mQ_header';
+@import './mediaQueries/mQ_main';
