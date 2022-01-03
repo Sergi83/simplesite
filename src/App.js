@@ -1,25 +1,31 @@
 import React from 'react';
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from 'react-router-dom';
 
 // pages, components
-import Navbar from "./components/Navbar";
-import About from "./pages/About";
-import Home from "./pages/Home";
-import Banner from './components/Banner';
-import Main from './components/Main';
-import Footer from './components/Footer';
+import Home from './pages/Home';
+import About from './pages/About';
+import Jobs from './pages/Jobs';
+import Contact from './pages/Contact';
+import Error from './pages/Error';
+
 
 
 function App() {
   return (
-    <div className="App">
-      <Navbar/>
-      <Home/>
-      <About/>
-      <Banner/>
-      <Main/>
-      <Footer/>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/about" element={<About />} />
+        <Route path="/jobs" element={<Jobs/>} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<Error/>} />
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

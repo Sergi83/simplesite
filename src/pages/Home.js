@@ -1,11 +1,27 @@
-import React from 'react'
+import React from 'react';
+
+// import components
+import Navbar from '../components/Navbar';
+import Banner from '../components/Banner';
+
 
 const Home = () => {
     return (
-        <div>
-            [home]
-        </div>
-    )
-}
+        <>
+            <header id="header-wrapper">
 
-export default Home
+                {/* Header container */}
+                <Navbar />
+                <br/>
+
+                {/* Header banner */}
+                <div id="header-featured">
+                    <Banner/>
+                </div>
+
+            </header>
+        </>
+    );
+};
+
+export default Home;
