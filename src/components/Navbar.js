@@ -10,9 +10,10 @@ export default function Navbar() {
             {/* Logo */}
             <div id="logo">
                 <Link to='/'>
-                    {logo
+                    {/* {logo
                     ? <img src={logo} alt='computer logo' className='logo' />
-                    : <h1>Simplesite</h1>}
+                    : <h1>Simplesite</h1>} */}
+                    <h1>Simplesite</h1>
                 </Link>
             </div>
 
