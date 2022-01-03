@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Contact = () => {
     return (
         <div>
-            [contact]
+            [contact form]
             <Link to="/" >
                 back home
             </Link>
