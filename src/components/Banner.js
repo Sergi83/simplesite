@@ -17,7 +17,7 @@ const Banner = () => {
                     {bannerTextContent}
                 </p>
                 <br/>
-                <Link to="/" >
+                <Link to="/contact" className="button" >
                     Link to Contact
                 </Link>
                 {/* <a href="#" className="button">Main button</a> */}

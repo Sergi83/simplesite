@@ -98,8 +98,12 @@
 
         .button {
             font-size: 1.3em;
-            border-radius: 42px;
-        }
+            border-radius: 1rem;
+            -webkit-border-radius: 1rem;
+            -moz-border-radius: 1rem;
+            -ms-border-radius: 1rem;
+            -o-border-radius: 1rem;
+}
     }
 
     @include for-size(desktop-up) {

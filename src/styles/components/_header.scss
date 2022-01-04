@@ -45,11 +45,11 @@
     @extend %menu-li-a;
 
     a:hover {
-        @include background-brdradius($base-color, 30px);
+        @include background-brdradius($base-color, 1rem);
     }
 
     .current_page_item {
-        @include background-brdradius($button-color, 30px);
+        @include background-brdradius($button-color, 1rem);
     }
 }
 

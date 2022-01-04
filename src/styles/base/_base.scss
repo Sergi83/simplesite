@@ -100,14 +100,16 @@ h5 {
 }
 
 .button {
-    @include fontz($font-bold,
-    1.5em);
-    text-transform: uppercase;
+    @include fontz($font-bold,1.5em);
     display: inline-block;
-
     margin-top: 2em;
-    border-radius: 50px;
     padding: 1.3em 3em;
     background: $button-color;
+    text-transform: uppercase;
     text-decoration: none;
+    border-radius: 1.5rem;
+    -webkit-border-radius: 1.5rem;
+    -moz-border-radius: 1.5rem;
+    -ms-border-radius: 1.5rem;
+    -o-border-radius: 1.5rem;
 }
