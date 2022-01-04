@@ -2,17 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-const Contact = () => {
+const Clients = () => {
     return (
         <div>
-            <h3>[contact form]</h3>
-            <h4>
+            <h3>[Our Clients]</h3>
+            <div>
                 <Link to="/" >
                     to homepage
                 </Link>
-            </h4>
+            </div>
         </div>
     );
 };
 
-export default Contact;
+export default Clients;

@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-const Contact = () => {
+const Careers = () => {
     return (
         <div>
-            <h3>[contact form]</h3>
+            <h3>[Careers]</h3>
             <h4>
                 <Link to="/" >
                     to homepage
@@ -15,4 +15,4 @@ const Contact = () => {
     );
 };
 
-export default Contact;
+export default Careers;

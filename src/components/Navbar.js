@@ -21,13 +21,16 @@ export default function Navbar() {
             <div id="menu">
                 <ul>
                     <li>
-                        <Link to='/'>Home</Link>
+                        <Link to='/'>Homepage</Link>
                     </li>
                     <li>
-                        <Link to='/about'>About</Link>
+                        <Link to='/clients'>Our Clients</Link>
                     </li>
                     <li>
-                        <Link to='/jobs'>Jobs</Link>
+                        <Link to='/about'>About us</Link>
+                    </li>
+                    <li>
+                        <Link to='/careers'>Careers</Link>
                     </li>
                     <li>
                         <Link to='/contact'>Contact</Link>

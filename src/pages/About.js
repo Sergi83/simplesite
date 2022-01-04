@@ -10,7 +10,7 @@ const About = () => {
         <>
             <main className="wrapper">
                 <Link to="/" >
-                back home
+                    to homepage
                 </Link>
                 <Main/>
             </main>
