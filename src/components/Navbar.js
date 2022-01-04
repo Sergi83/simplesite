@@ -5,7 +5,7 @@ import { linksNavbar } from '../content/navContent';
 import logo from '../styles/images/computer_logo_icon.svg';
 
 
-// TODO: make navbar with hooks, mapping links, get from external data file
+// TODO: correct styles
 
 export default function Navbar() {
 
@@ -42,6 +42,7 @@ export default function Navbar() {
                         <FaBars />
                     </button>
                 </div>
+                {/* mobile menu */}
                 <div className='links-container' ref= {linksContainerRef}>
                     <ul className='links' ref={linksRef}>
                         {/* show navbar links */}
@@ -59,37 +60,3 @@ export default function Navbar() {
         </nav>
     );
 };
-
-// old navbar
-{/* <> */}
-{/* Logo */}
-//     <div id="logo">
-//         <Link to="/">
-//             {/* {logo
-//             ? <img src={logo} alt='computer logo' className='logo' />
-//             : <h1>Simplesite</h1>} */}
-//             <h1>Simplesite</h1>
-//         </Link>
-//     </div>
-
-//     {/* Menu */}
-//     <div id="menu">
-//         <ul>
-//             <li>
-//                 <Link to='/'>Homepage</Link>
-//             </li>
-//             <li>
-//                 <Link to='/clients'>Our Clients</Link>
-//             </li>
-//             <li>
-//                 <Link to='/about'>About us</Link>
-//             </li>
-//             <li>
-//                 <Link to='/careers'>Careers</Link>
-//             </li>
-//             <li>
-//                 <Link to='/contact'>Contact</Link>
-//             </li>
-//         </ul>
-//     </div>
-// </>
