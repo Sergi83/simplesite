@@ -13,8 +13,8 @@ const About = () => {
                 back home
                 </Link>
                 <Main/>
-                <Footer />
             </main>
+            <Footer />
         </>
     );
 };

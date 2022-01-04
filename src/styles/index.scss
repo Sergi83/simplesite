@@ -25,13 +25,6 @@ Main
 */
 @import './components/main';
 
-/* 
-====== 
-Media Queries
-======
-*/
-@import './mediaQueries/mQ_header';
-@import './mediaQueries/mQ_main';
 
 /* 
 ====== 
@@ -40,3 +33,10 @@ Footer
 */
 @import './components/footer';
 
+/* 
+====== 
+Media Queries
+======
+*/
+@import './mediaQueries/mQ_header';
+@import './mediaQueries/mQ_main';
