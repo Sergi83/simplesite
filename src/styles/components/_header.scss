@@ -1,12 +1,12 @@
-// mixins and templates
-@import '../variables_mixins';
+@import '../variables_templates';
+@import '../mixins';
 
 
 
 
 // * HEADER
 
-
+// Homepage
 #header-wrapper {
     background: url(../../styles/images/nasa-earth-view.jpg) no-repeat center center fixed;
     height: 100%;
@@ -18,7 +18,7 @@
 
 .container {
     margin: 0 auto;
-    box-sizing: border-box;
+    padding: 4em 0 0 0;
     text-align: center;
     width: 80%;
 }
@@ -71,5 +71,14 @@
 
     a {
         color: $banner-links-color;
+        // text-decoration: underline;
+
+        &:hover {
+            color: $banner-links-hover;
+        }
     }
+
+    a .button {
+        // text-decoration: none;
+     }
 }

@@ -14,7 +14,6 @@ import Contact from './pages/Contact';
 import Error from './pages/Error';
 
 
-
 function App() {
   return (
     <BrowserRouter>

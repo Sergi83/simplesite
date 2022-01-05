@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa';
-import { linksNavbar } from '../content/navContent';
+import { linksNavbar } from '../content/homepageContent';
 import logo from '../styles/images/computer_logo_icon.svg';
 
 

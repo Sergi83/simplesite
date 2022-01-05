@@ -1,18 +1,17 @@
-@import '../variables_mixins';
+@import '../variables_templates';
+@import '../mixins';
+
+
 
 // * HEADER
 
 
 #header-wrapper {
-    @include for-size(tablet-landscape-up) {
-        overflow: auto;
-    }
+    @include for-size(tablet-landscape-up) { overflow: auto; }
 }
 
 .container {
-    @include for-size(desktop-up) {
-        width: 1200px;
-    }
+    @include for-size(desktop-up) { width: 1200px; }
 }
 
 #header {
@@ -27,9 +26,7 @@
     @include for-size(phone-only) {
         top: 2em;
 
-        a {
-            font-size: 1em;
-        }
+        a { font-size: 1em; }
     }
 
     @include for-size(tablet-portrait-up) {
@@ -51,9 +48,7 @@
     @include for-size(phone-only) {
         // display: none;
 
-        li {
-            float: none;
-        }
+        li { float: none; }
     }
 
     @include for-size(tablet-portrait-up) {
@@ -74,13 +69,9 @@
 }
 
 #header-featured {
-    @include for-size(phone-only) {
-        width: auto;
-    }
+    @include for-size(phone-only) { width: auto; }
 
-    @include for-size(desktop-up) {
-        padding: 10em 0;
-    }
+    @include for-size(desktop-up) { padding: 10em 0; }
 }
 
 #banner {
@@ -92,21 +83,13 @@
             padding-bottom: 0.3em;
         }
 
-        h4 {
-            font-size: 1.3em;
-        }
-
+        h4 { font-size: 1.3em; }
+        
         .button {
             font-size: 1.3em;
-            border-radius: 1rem;
-            -webkit-border-radius: 1rem;
-            -moz-border-radius: 1rem;
-            -ms-border-radius: 1rem;
-            -o-border-radius: 1rem;
+            @include background-brdradius($button-color, $bor-rad-btn-sm);
 }
     }
 
-    @include for-size(desktop-up) {
-        width: 1000px;
-    }
+    @include for-size(desktop-up) { width: 1000px; }
 }

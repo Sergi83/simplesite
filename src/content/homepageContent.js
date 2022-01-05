@@ -28,3 +28,21 @@ export const linksNavbar = [
     text: 'contact',
   },
 ];
+
+// banner, footer links
+export const externalLinks = {
+  siteName: 'Simplesite',
+  templated: {
+      link: 'http://templated.co',
+      text: 'TEMPLATED'
+  },
+  unsplash: {
+      link: 'https://unsplash.com',
+      text: 'Unsplash'
+  },
+  cca: {
+      link: 'http://templated.co/license',
+      text: 'Creative Commons Attribution'
+  },
+};
+

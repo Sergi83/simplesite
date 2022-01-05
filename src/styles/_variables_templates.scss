@@ -1,0 +1,127 @@
+// colors
+$color-white: #fff;
+$base-color: #6c6c6c;
+
+$h3-color: #323232;
+$h5-color: #454445;
+
+$a-color: #525252;
+
+$banner-text-color: rgba(255, 255, 255, 0.808);
+$banner-links-color: rgba(255, 255, 255, 5);
+$banner-links-hover: rgba(255, 255, 255, 0.3);
+
+$button-color: #1757ae;
+
+$byline-color: #6f6f6f;
+$underline-color: #d1cfce;
+
+$background-dark: #2b2b2b;
+$footer-color: rgba(255, 255, 255, 0.3);
+$footer-link: rgba(255, 255, 255, 0.6);
+
+
+// font-size
+$body-font: 14.67px;
+// $fz-menu: 1em;
+
+// create variables for font-weight map
+$font-thin: 300;
+$font-norm: 400;
+$font-bold: 600;
+$font-bolder: 700;
+
+// border-radius
+$bor-rad-btn-sm: 1rem;
+$bor-rad-btn-lg: 1.5rem;
+
+
+// * navbar variables
+// !re-write navbar variables
+
+/* dark shades of primary color*/
+$clr-primary-1: hsl(205, 86%, 17%);
+$clr-primary-2: hsl(205, 77%, 27%);
+$clr-primary-3: hsl(205, 72%, 37%);
+$clr-primary-4: hsl(205, 63%, 48%);
+
+/* primary/main color */
+$clr-primary-5: hsl(205, 78%, 60%);
+
+/* lighter shades of primary color */
+$clr-primary-6: hsl(205, 89%, 70%);
+$clr-primary-7: hsl(205, 90%, 76%);
+$clr-primary-8: hsl(205, 86%, 81%);
+$clr-primary-9: hsl(205, 90%, 88%);
+$clr-primary-10: hsl(205, 100%, 96%);
+
+/* darkest grey - used for headings */
+$clr-grey-1: hsl(209, 61%, 16%);
+$clr-grey-2: hsl(211, 39%, 23%);
+$clr-grey-3: hsl(209, 34%, 30%);
+$clr-grey-4: hsl(209, 28%, 39%);
+
+/* grey used for paragraphs */
+$clr-grey-5: hsl(210, 22%, 49%);
+$clr-grey-6: hsl(209, 23%, 60%);
+$clr-grey-7: hsl(211, 27%, 70%);
+$clr-grey-8: hsl(210, 31%, 80%);
+$clr-grey-9: hsl(212, 33%, 89%);
+$clr-grey-10: hsl(210, 36%, 96%);
+$clr-white: #fff;
+$clr-red-dark: hsl(360, 67%, 44%);
+$clr-red-light: hsl(360, 71%, 66%);
+$clr-green-dark: hsl(125, 67%, 44%);
+$clr-green-light: hsl(125, 71%, 66%);
+$clr-black: #222;
+
+$spacing: 0.1rem;
+
+$radius: 0.25rem;
+$light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+$dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+$max-width: 1170px;
+$fixed-width: 620px;
+
+// *
+$transition-nav: all 0.3s linear;
+
+
+
+
+
+// * templates
+
+//  %tmpl{...} -> @extend %tmpl
+//! check (_base.scss inside p tag)
+%ul-li-base-mg-bl {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+//! menu list item and link style template
+%menu-li-a {
+    li {
+        display: block;
+        text-align: center;
+    }
+
+    a {
+        display: inline-block;
+        margin-left: 1px;
+        padding: 1em 1.5em 1em 1.5em;
+        letter-spacing: 0.10em;
+        font-size: 1em;
+        text-transform: uppercase;
+        outline: 0;
+    }
+}
+
+// sidebar template (_main.scss sidebar, .style1/.style2)
+%sidebar-li-first {
+    li:first-child {
+        padding-top: 0;
+        border-top: 0;
+    }
+}

@@ -1,27 +1,31 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
+import { sidebarStyle1TextContent } from '../../content/sidebarContent';
+
 
 const SidebarStyle1 = () => {
+    
     return (
         <ul className="style1">
-            <li className="sidebar_1li">
-                <h5>Amet sed volutpat mauris</h5><br/>
-
-                <p><a href="#">In posuere eleifend odio. Quisque semper augue mattis wisi. Pellentesque viverra vulputate enim. Aliquam erat volutpat.</a></p>
-            </li>
-            <br/>
-            <li>
-                <h5>Sagittis diam dolor sit amet</h5><br/>
-
-                <p><a href="#">In posuere eleifend odio. Quisque semper augue mattis wisi. Pellentesque viverra vulputate enim. Aliquam erat volutpat.</a></p>
-            </li>
-            <br/>
-            <li>
-                <h5>Maecenas ac quam risus</h5><br/>
-
-                <p><a href="#">In posuere eleifend odio. Quisque semper augue mattis wisi. Pellentesque viverra vulputate enim. Aliquam erat volutpat.</a></p>
-            </li>
+            {sidebarStyle1TextContent.map((liItem,index) => {
+                return (index === 0)
+                    ?(
+                        <li className="sidebar_1li" key={index} >
+                            <h5>{liItem.title}</h5>
+                            <p><Link to='/clients'>{liItem.textLink}</Link></p>
+                        </li>
+                    )
+                    :(
+                        <li key={index} >
+                            <h5>{liItem.title}</h5>
+                            <p><Link to='/clients'>{liItem.textLink}</Link></p>
+                        </li>
+                    );
+                }
+            )}
         </ul>
-    )
-}
+    );
+};
 
-export default SidebarStyle1
+export default SidebarStyle1;

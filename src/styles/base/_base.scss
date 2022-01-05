@@ -1,8 +1,8 @@
+@import '../variables_templates';
+@import '../mixins';
 
 
-@import '../variables_mixins';
-
-// * 
+// * Global styles
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -25,12 +25,9 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     ;
-    font-size: 14.67px;
-
-    // map-get use font-weight map from variables.scss
-
-    font-weight: $font-thin;
+    @include fontz($body-font, $font-thin);
     color: $base-color;
+    box-sizing: border-box;
     height: 100%;
 }
 
@@ -48,10 +45,11 @@ a {
     }
 }
 
+// ! check variables
 p {
     line-height: 180%;
-    @extend %ul-li-base-mg-bl;
     margin-top: 0;
+    @extend %ul-li-base-mg-bl;
 }
 
 ul {}
@@ -61,7 +59,7 @@ li {
     text-align: -webkit-match-parent;
 }
 
-// map-get use font-weight map from variables.scss
+// headers
 
 h1 {
     @include fontz($font-bolder, 2.5em);
@@ -100,16 +98,12 @@ h5 {
 }
 
 .button {
-    @include fontz($font-bold,1.5em);
     display: inline-block;
     margin-top: 2em;
     padding: 1.3em 3em;
-    background: $button-color;
     text-transform: uppercase;
     text-decoration: none;
-    border-radius: 1.5rem;
-    -webkit-border-radius: 1.5rem;
-    -moz-border-radius: 1.5rem;
-    -ms-border-radius: 1.5rem;
-    -o-border-radius: 1.5rem;
+
+    @include fontz($font-bold,1.5em);
+    @include background-brdradius($button-color, $bor-rad-btn-lg);
 }
