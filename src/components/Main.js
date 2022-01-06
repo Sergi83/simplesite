@@ -1,12 +1,17 @@
 import React from 'react';
 import Sidebar from './sidebar/Sidebar';
+import imageMain from '../styles/images/key_type.jpg';
+import ProgressiveImage from 'react-progressive-graceful-image';
+import { AiFillPicture } from 'react-icons/ai';
 
 import mainTextContent from '../content/mainContent';
 
 
 const Main = () => {
 
-    
+    const loadingImage = () => {
+        return <p  className='image'><AiFillPicture className='imageIcon' /></p>
+    };
 
     return (
         <>
@@ -22,10 +27,17 @@ const Main = () => {
                         <span className="byline">Mauris vulputate dolor sit amet nibh</span>
                     </div><br/>
 
-                    <p>
-                    {/* <img src="images/key_type.jpg" alt="Keyboard" width="100%" className="image image-full"> */}
 
-                    </p>
+                    <div>
+                        <ProgressiveImage src={imageMain}>
+                            {(src, loading) => {
+                                return loading
+                                ? loadingImage()
+                                : <img src={src} alt="Keyboard" className="image-full" />
+                            }}
+                        </ProgressiveImage>
+
+                    </div>
                     <br/>
                     {mainTextContent.map((p,i) => <p key={i} >{p}</p>)}
 

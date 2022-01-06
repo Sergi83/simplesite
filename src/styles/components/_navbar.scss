@@ -20,7 +20,7 @@ nav {
 
 .nav-toggle {
     font-size: 1.5rem;
-    color: $clr-grey-9;
+    color: $a-color;
     background: transparent;
     border-color: transparent;
     cursor: pointer;
@@ -28,7 +28,7 @@ nav {
     @include transition($transition-nav);
 
     &:hover {
-        color: $clr-primary-4;
+        color: $a-color-hover;
         transform: rotate(90deg);
     }
 }
@@ -36,7 +36,7 @@ nav {
 .logo { height: 30px; }
 
 .links .a {
-    color: $clr-primary-10;
+    color: $a-color;
     font-size: 1rem;
     text-transform: capitalize;
     text-decoration: none;
@@ -47,8 +47,8 @@ nav {
     @include transition($transition-nav);
     
     &:hover {
-        background: $clr-primary-8;
-        color: $clr-primary-9;
+        background: $base-color;
+        color: $a-color-hover;
         padding-left: 1rem;
     }
 }

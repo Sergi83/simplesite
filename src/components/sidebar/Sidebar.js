@@ -12,7 +12,7 @@ const Sidebar = () => {
             <br/>
             <SidebarStyle1 />
 
-            {/* Sidebar with two colons (sbox1, sbox2) */}
+            {/* Sidebar with two colons (box1, box2) */}
             <br/>
             <div id="stwo-col">
                 <Box1 />

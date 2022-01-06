@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 
 
 const Error = () => {
-    return (        
+    return (
         <>
             <main className="wrapper">
                 <div className="container">

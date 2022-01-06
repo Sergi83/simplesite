@@ -33,25 +33,26 @@
     }
 }
 
-#logo {}
+// ! correct navbar (classes, variables, mQ)
+// #logo {}
 
-#menu {
-    ul {
-        display: inline-block;
-        padding: 0;
-    }
+// #menu {
+//     ul {
+//         display: inline-block;
+//         padding: 0;
+//     }
 
-    // display, float, margin, padding, text parameters
-    @extend %menu-li-a;
+//     // display, float, margin, padding, text parameters
+//     @extend %menu-li-a;
 
-    a:hover {
-        @include background-brdradius($base-color, 1rem);
-    }
+//     a:hover {
+//         @include background-brdradius($base-color, 1rem);
+//     }
 
-    .current_page_item {
-        @include background-brdradius($button-color, 1rem);
-    }
-}
+//     .current_page_item {
+//         @include background-brdradius($button-color, 1rem);
+//     }
+// }
 
 // end of #menu
 
@@ -80,5 +81,5 @@
 
     a .button {
         // text-decoration: none;
-     }
+    }
 }

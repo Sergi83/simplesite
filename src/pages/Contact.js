@@ -15,8 +15,7 @@ const Contact = () => {
                         <div className="title">
                             <h3>[contact form]</h3>
                             <br/>
-                            <article>[contact text]</article>
-                            <button>send</button>
+                            <button>confirm</button>
                         </div>
                     </div>
                 </div>
