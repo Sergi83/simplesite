@@ -1,17 +1,20 @@
 import React from "react";
 import Main from "../components/Main";
-// import Navbar from '../components/Navbar';
-import { Link } from "react-router-dom";
+
+// components
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+// layout
+import MainLayout from '../components/layouts/MainLayout';
+
 
 const About = () => {
   return (
     <>
-      <main className="wrapper">
+      <MainLayout>
         <Navbar />
         <Main />
-      </main>
+      </MainLayout>
       <Footer />
     </>
   );

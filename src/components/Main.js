@@ -1,12 +1,17 @@
 import React from "react";
 import Sidebar from "./sidebar/Sidebar";
+
+// for loading images
 import imageMain from "../styles/images/key_type.jpg";
 import ProgressiveImage from "react-progressive-graceful-image";
 import { AiFillPicture } from "react-icons/ai";
 
 import mainTextContent from "../content/mainContent";
 
+
 const Main = () => {
+
+  // element showing before a image
   const loadingImage = () => {
     return (
       <p className="image">
@@ -17,10 +22,9 @@ const Main = () => {
 
   return (
     <>
-      {/* Main page Container */}
-      <div id="page" className="container">
+      <div id="page">
         {/* Content */}
-        <div id="content_sidebars">
+        <div id="main_sidebar_content">
           <br />
           <div className="title">
             <h3>Welcome to our website</h3>

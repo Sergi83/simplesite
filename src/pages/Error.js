@@ -1,25 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+// components
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+// layout
+import MainLayout from "../components/layouts/MainLayout";
 
 const Error = () => {
   return (
     <>
-      <main className="wrapper">
-        <div className="container">
-          <Navbar />
-          <div className="content">
+      <MainLayout>
+        <Navbar />
+        <div className="content">
+          <br />
+          <div className="title">
+            <h3>No such page</h3>
             <br />
-            <div className="title">
-              <h3>No such page</h3>
-              <br />
-              <Link to="/">to homepage</Link>
-            </div>
+            <Link to="/">to homepage</Link>
           </div>
         </div>
-      </main>
+      </MainLayout>
       <Footer />
     </>
   );

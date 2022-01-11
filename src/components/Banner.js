@@ -24,6 +24,7 @@ const Banner = () => {
   };
 
   return (
+    <div id="header-featured">
     <div id="banner-wrapper">
       <div id="banner" className="container">
         <h2>Banner Main Header</h2>
@@ -36,6 +37,7 @@ const Banner = () => {
           Link to Contact
         </Link>
       </div>
+    </div>
     </div>
   );
 };

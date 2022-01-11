@@ -15,7 +15,7 @@
     }
 }
 
-#content_sidebars {
+#main_sidebar_content {
     @include for-size(tablet-landscape-up) {
         // ($float, $text-a, $w-main, $w-side, $percent)
         // width formula: ('width-main' * 'x%') / ('width-main' + 'width-side')

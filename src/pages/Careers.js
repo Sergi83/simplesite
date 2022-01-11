@@ -4,23 +4,23 @@ import React from "react";
 // components
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+// layout
+import MainLayout from "../components/layouts/MainLayout";
 
 const Careers = () => {
   return (
     <>
-      <main className="wrapper">
-        <div className="container">
-          <Navbar />
-          <div className="content">
+      <MainLayout>
+        <Navbar />
+        <div className="content">
+          <br />
+          <div className="title">
+            <h3>[careers]</h3>
             <br />
-            <div className="title">
-              <h3>[careers]</h3>
-              <br />
-              <article>[careers text]</article>
-            </div>
+            <article>[careers text]</article>
           </div>
         </div>
-      </main>
+      </MainLayout>
       <Footer />
     </>
   );
