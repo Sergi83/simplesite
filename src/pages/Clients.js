@@ -1,5 +1,5 @@
 import React from "react";
-// import { Link } from 'react-router-dom';
+// import { Link } from "react-router-dom";
 
 // components
 import Navbar from "../components/Navbar";
@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 // layout
 import MainLayout from "../components/layouts/MainLayout";
 
-const Contact = () => {
+const Clients = () => {
   return (
     <>
       <MainLayout>
@@ -15,9 +15,9 @@ const Contact = () => {
         <div className="content">
           <br />
           <div className="title">
-            <h3>[contact form]</h3>
+            <h3>[Our Clients]</h3>
             <br />
-            <button>confirm</button>
+            <article>[some text]</article>
           </div>
         </div>
       </MainLayout>
@@ -26,4 +26,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Clients;

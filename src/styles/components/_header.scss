@@ -1,0 +1,103 @@
+@import "../variables_templates";
+@import "../mixins";
+
+
+// * HEADER
+
+// Homepage
+#header-wrapper {
+  background: url(../../styles/images/nasa-earth-view.jpg) no-repeat center
+    center fixed;
+  min-height: 100vh;
+  height: 100%;
+  overflow: hidden;
+}
+
+
+//* Navbar
+
+nav {
+  background: transparent;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo {
+  height: 2em;
+}
+
+.nav-toggle {
+  font-size: 1.5rem;
+  color: $a-color;
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+
+  @include transition($transition-nav);
+
+  &:hover {
+    color: $a-color-hover;
+    transform: rotate(90deg);
+  }
+}
+
+.links .a {
+  padding: 0.5rem 1rem;
+  color: $a-color;
+  font-size: 1rem;
+  letter-spacing: $spacing;
+
+  @include display-text-transform-decor(block, capitalize, none);
+  @include transition($transition-nav);
+
+  &:hover {
+    text-decoration: underline;
+    color: $a-color-hover;
+    padding-left: 1rem;
+  }
+}
+
+.links .active {
+  font-weight: $font-bolder;
+}
+
+.links-container {
+  height: 0;
+  overflow: hidden;
+  @include transition($transition-nav);
+}
+
+.show-container {
+  height: 10rem;
+}
+
+// end of Navbar
+
+
+// * Banner
+
+#header-featured {
+  padding: 5em 0;
+}
+
+#banner {
+  overflow: hidden;
+  width: 75%;
+
+  strong {
+    font-weight: $font-bolder;
+    color: $color-white;
+  }
+
+  a {
+    color: $banner-links-color;
+  }
+  a:hover {
+    color: $banner-links-hover;
+  }
+}

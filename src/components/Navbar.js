@@ -1,36 +1,71 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useRef, useEffect } from "react";
+import { NavLink } from "react-router-dom";
+import { FaBars } from "react-icons/fa";
+import { linksNavbar } from "../content/homepageContent";
+import logo from "../styles/images/computer_logo_icon.svg";
+
 
 
 export default function Navbar() {
+
+  // hook for button -> show/hide mobile menu
+  const [showLinks, setShowLinks] = useState(false);
+
+  // ref hook open/close container for navbar links inside mobile menu
+  const linksContainerRef = useRef(null);
+
+  // measure space for rendering navbar links
+  const linksRef = useRef(null);
+
+  // depending on open or close mobile menu measure space for links and establish the height of the links container
+  useEffect(() => {
+    const linksHeight = linksRef.current.getBoundingClientRect().height;
+
+    if (showLinks) {
+      linksContainerRef.current.style.height = `${linksHeight}px`;
+    } else {
+      linksContainerRef.current.style.height = "0px";
+    }
+  }, [showLinks]);
+
   return (
-    <div id="header" className="container">
+    <nav>
+      <div className="nav-center">
+        <div className="nav-header">
 
-            {/* Logo */}
-            <div id="logo">
-                <Link to='/'>
-                    {/* <img src={logo} alt='logo' className='logo' /> */}
-                    <h1>Simplesite</h1>
-                </Link>
-            </div>
+          {/* logo */}
+          <img src={logo} alt="logo" className="logo" />
 
-            {/* Menu */}
-            <div id="menu">
-                <ul>
-                    <li>
-                        <Link to='/'>Home</Link>
-                    </li>
-                    <li>
-                        <Link to='/about'>About</Link>
-                    </li>
-                    <li>
-                        <Link to='/jobs'>Jobs</Link>
-                    </li>
-                    <li>
-                        <Link to='/contact'>Contact</Link>
-                    </li>
-                </ul>
-            </div>
+          {/* button -> show/hide mobile menu */}
+          <button
+            className="nav-toggle"
+            onClick={() => setShowLinks(!showLinks)}
+          >
+            <FaBars />
+          </button>
         </div>
+
+        {/* mobile menu */}
+        <div className="links-container" ref={linksContainerRef}>
+
+          <ul className="links" ref={linksRef}>
+
+            {/* show navbar links */}
+            {linksNavbar.map((link) => {
+              const { id, url, text } = link;
+
+              return (
+                <li key={id}>
+                  <NavLink to={url} className="a" activeClassName="active">
+                    {text}
+                  </NavLink>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        
+      </div>
+    </nav>
   );
-};
+}

@@ -1,20 +1,23 @@
-import React from 'react';
-import Main from '../components/Main';
-// import Navbar from '../components/Navbar';
-import { Link } from 'react-router-dom';
+import React from "react";
+import Main from "../components/Main";
+
+// components
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+// layout
+import MainLayout from '../components/layouts/MainLayout';
 
 
 const About = () => {
-    return (
-        <>
-            <main className="wrapper">
-                <Main/>
-                <Link to="/" >
-                back home
-                </Link>
-            </main>
-        </>
-    );
+  return (
+    <>
+      <MainLayout>
+        <Navbar />
+        <Main />
+      </MainLayout>
+      <Footer />
+    </>
+  );
 };
 
 export default About;

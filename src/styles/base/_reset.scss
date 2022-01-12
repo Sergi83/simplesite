@@ -1,11 +1,11 @@
 // to all html
 * {
-    margin: 0;
-    padding: 0;
-    bottom: 0;
-    font-size: 100%;
-    // font: inherit;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  font-size: 100%;
+  // font: inherit;
+  box-sizing: border-box;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -20,27 +20,27 @@ hgroup,
 menu,
 nav,
 section {
-    display: block;
+  display: block;
 }
 
 body {
-    line-height: 1;
+  line-height: 1;
 }
 
 ol,
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 blockquote,
 q {
-    quotes: none;
+  quotes: none;
 }
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-    content: '';
-    content: none;
+  content: "";
+  content: none;
 }

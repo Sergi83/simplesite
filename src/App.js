@@ -5,13 +5,13 @@ import {
   Route
 } from 'react-router-dom';
 
-// pages, components
+// pages
 import Home from './pages/Home';
+import Clients from './pages/Clients';
 import About from './pages/About';
-import Jobs from './pages/Jobs';
+import Careers from './pages/Careers';
 import Contact from './pages/Contact';
 import Error from './pages/Error';
-
 
 
 function App() {
@@ -19,10 +19,11 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />}/>
+        <Route path="/clients" element={<Clients />} />
         <Route path="/about" element={<About />} />
-        <Route path="/jobs" element={<Jobs/>} />
+        <Route path="/careers" element={<Careers />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<Error/>} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
   );

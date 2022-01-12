@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 // layout
 import MainLayout from "../components/layouts/MainLayout";
 
-const Contact = () => {
+const Careers = () => {
   return (
     <>
       <MainLayout>
@@ -15,9 +15,9 @@ const Contact = () => {
         <div className="content">
           <br />
           <div className="title">
-            <h3>[contact form]</h3>
+            <h3>[careers]</h3>
             <br />
-            <button>confirm</button>
+            <article>[careers text]</article>
           </div>
         </div>
       </MainLayout>
@@ -26,4 +26,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Careers;

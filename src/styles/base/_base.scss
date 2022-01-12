@@ -1,0 +1,101 @@
+@import "../variables_templates";
+@import "../mixins";
+
+// * Global styles
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+body {
+  box-sizing: border-box;
+  height: 100%;
+  background: $background-dark;
+  color: $base-color;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @include fontz($body-font, $font-thin);
+}
+
+div {
+  display: block;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: underline;
+  color: $a-color;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+p {
+  line-height: 180%;
+  margin-top: 0;
+  @extend %ul-li-base-mg-bl;
+}
+
+ul {
+}
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+// headers
+
+h1 {
+  @include fontz($font-bolder, 2.5rem);
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+h2 {
+  @include fontz($font-norm, 4.5rem);
+  color: $color-white;
+  padding-bottom: 0.5em;
+}
+
+h3 {
+  @include fontz($font-norm, 2.8rem);
+  color: $h3-color;
+}
+
+h4 {
+  @include fontz($font-thin, 1.5rem);
+  color: $banner-text-color;
+  line-height: 180%;
+}
+
+h5 {
+  @include fontz($font-bold, 1.2rem);
+  color: $h5-color;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 4em 0 1em 0;
+  text-align: center;
+  width: 90%;
+
+  @include for-size(desktop-up) {
+    width: 80%;
+  }
+}
+
+.button {
+
+  @include display-text-transform-decor(inline-block, uppercase, none);
+  @include fontz($font-bold, 1.5rem);
+  @include background-brdradius($button-color, $bor-rad-btn-lg);
+}
