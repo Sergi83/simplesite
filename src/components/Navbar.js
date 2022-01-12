@@ -4,9 +4,10 @@ import { FaBars } from "react-icons/fa";
 import { linksNavbar } from "../content/homepageContent";
 import logo from "../styles/images/computer_logo_icon.svg";
 
-// TODO: correct styles
+
 
 export default function Navbar() {
+
   // hook for button -> show/hide mobile menu
   const [showLinks, setShowLinks] = useState(false);
 
@@ -31,6 +32,7 @@ export default function Navbar() {
     <nav>
       <div className="nav-center">
         <div className="nav-header">
+
           {/* logo */}
           <img src={logo} alt="logo" className="logo" />
 
@@ -42,15 +44,19 @@ export default function Navbar() {
             <FaBars />
           </button>
         </div>
+
         {/* mobile menu */}
         <div className="links-container" ref={linksContainerRef}>
+
           <ul className="links" ref={linksRef}>
+
             {/* show navbar links */}
             {linksNavbar.map((link) => {
               const { id, url, text } = link;
+
               return (
                 <li key={id}>
-                  <NavLink to={url} ActiveClassName="a">
+                  <NavLink to={url} className="a" activeClassName="active">
                     {text}
                   </NavLink>
                 </li>
@@ -58,6 +64,7 @@ export default function Navbar() {
             })}
           </ul>
         </div>
+        
       </div>
     </nav>
   );

@@ -22,8 +22,8 @@ const Main = () => {
 
   return (
     <>
-      <div id="page">
-        {/* Content */}
+      <div id="aboutPage">
+        {/* Main Content (left or upper section) */}
         <div id="main_sidebar_content">
           <br />
           <div className="title">
@@ -45,11 +45,16 @@ const Main = () => {
             </ProgressiveImage>
           </div>
           <br />
+
+          {/* Loading paragraphs */}
           {mainTextContent.map((p, i) => (
             <p key={i}>{p}</p>
           ))}
         </div>
+
+        {/* Additional Content (right or down section)  with links to another pages */}
         <Sidebar />
+
       </div>
       <br />
     </>

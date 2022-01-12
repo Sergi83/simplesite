@@ -1,85 +1,103 @@
-@import '../variables_templates';
-@import '../mixins';
-
-
+@import "../variables_templates";
+@import "../mixins";
 
 
 // * HEADER
 
 // Homepage
 #header-wrapper {
-    background: url(../../styles/images/nasa-earth-view.jpg) no-repeat center center fixed;
-    height: 100%;
-    overflow: hidden;
-    // * or
-    // background: url(../../styles/images/nasa-earth-view.jpg) no-repeat center;
-    // background-size: auto 100%;
+  background: url(../../styles/images/nasa-earth-view.jpg) no-repeat center
+    center fixed;
+  min-height: 100vh;
+  height: 100%;
+  overflow: hidden;
 }
 
-.container {
-    margin: 0 auto;
-    padding: 4em 0 0 0;
-    text-align: center;
-    width: 80%;
+
+//* Navbar
+
+nav {
+  background: transparent;
 }
 
-#header {
-    position: relative;
-    height: 80%;
-
-    a {
-        text-decoration: none;
-        color: $color-white;
-    }
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
 }
 
-// ! correct navbar (classes, variables, mQ)
-// #logo {}
+.logo {
+  height: 2em;
+}
 
-// #menu {
-//     ul {
-//         display: inline-block;
-//         padding: 0;
-//     }
+.nav-toggle {
+  font-size: 1.5rem;
+  color: $a-color;
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
 
-//     // display, float, margin, padding, text parameters
-//     @extend %menu-li-a;
+  @include transition($transition-nav);
 
-//     a:hover {
-//         @include background-brdradius($base-color, 1rem);
-//     }
+  &:hover {
+    color: $a-color-hover;
+    transform: rotate(90deg);
+  }
+}
 
-//     .current_page_item {
-//         @include background-brdradius($button-color, 1rem);
-//     }
-// }
+.links .a {
+  padding: 0.5rem 1rem;
+  color: $a-color;
+  font-size: 1rem;
+  letter-spacing: $spacing;
 
-// end of #menu
+  @include display-text-transform-decor(block, capitalize, none);
+  @include transition($transition-nav);
+
+  &:hover {
+    text-decoration: underline;
+    color: $a-color-hover;
+    padding-left: 1rem;
+  }
+}
+
+.links .active {
+  font-weight: $font-bolder;
+}
+
+.links-container {
+  height: 0;
+  overflow: hidden;
+  @include transition($transition-nav);
+}
+
+.show-container {
+  height: 10rem;
+}
+
+// end of Navbar
+
+
+// * Banner
 
 #header-featured {
-    padding: 5em 0;
+  padding: 5em 0;
 }
 
 #banner {
-    overflow: hidden;
-    width: 75%;
+  overflow: hidden;
+  width: 75%;
 
-    strong {
-        // using font-weight map with variable 'bolder'
-        font-weight: $font-bolder;
-        color: $color-white;
-    }
+  strong {
+    font-weight: $font-bolder;
+    color: $color-white;
+  }
 
-    a {
-        color: $banner-links-color;
-        // text-decoration: underline;
-
-        &:hover {
-            color: $banner-links-hover;
-        }
-    }
-
-    a .button {
-        // text-decoration: none;
-    }
+  a {
+    color: $banner-links-color;
+  }
+  a:hover {
+    color: $banner-links-hover;
+  }
 }

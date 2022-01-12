@@ -1,95 +1,136 @@
-@import '../variables_templates';
-@import '../mixins';
-
-
+@import "../variables_templates";
+@import "../mixins";
 
 // * HEADER
 
-
 #header-wrapper {
-    @include for-size(tablet-landscape-up) { overflow: auto; }
+  @include for-size(tablet-landscape-up) {
+    overflow: auto;
+  }
 }
 
 .container {
-    @include for-size(desktop-up) { width: 1200px; }
+  @include for-size(desktop-up) {
+    width: 1200px;
+  }
 }
 
-#header {
-    @include for-size(desktop-up) {
-        display: flex;
-        justify-content: space-between;
-        height: 150px;
-    }
-}
+//  Navbar
 
-#logo {
-    @include for-size(phone-only) {
-        top: 2em;
-
-        a { font-size: 1em; }
+nav {
+  @include for-size(tablet-landscape-up) {
+    .nav-center {
+      max-width: $max-width;
+      margin: 0 auto;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
-    @include for-size(tablet-portrait-up) {
-        // position: relative;
-        // top: 2em;
-        @include pos-top(relative, 2em);
+    .nav-header {
+      padding: 0;
     }
 
-    @include for-size(tablet-landscape-up) {
-        @include pos-top(relative, 3em);
+    .logo {
+      height: 2.5em;
     }
 
-    @include for-size(desktop-up) {
-        @include pos-top(absolute, 6em);
-    }
-}
-
-#menu {
-    @include for-size(phone-only) {
-        // display: none;
-
-        li { float: none; }
+    .nav-toggle {
+      display: none;
     }
 
-    @include for-size(tablet-portrait-up) {
-        @include pos-top(relative, 3em);
+    .links-container {
+      height: auto !important;
     }
 
-    @include for-size(tablet-landscape-up) {
-        ul {
-            display: flex;
-            align-content: space-around;
+    .links {
+      display: flex;
+
+      .a {
+        padding: 0;
+        margin: 0 0.5rem;
+        font-size: 1.2rem;
+
+        &:hover {
+          padding: 0;
+          background: transparent;
         }
+      }
+    }
+  }
+
+  @include for-size(desktop-up) {
+    .links .a {
+      font-size: 1.5rem;
     }
 
-    @include for-size(desktop-up) {
-        @include pos-top(absolute, 6em);
-        right: 0;
+    .logo {
+      height: 3em;
     }
+  }
 }
+
+// end of Navbar
 
 #header-featured {
-    @include for-size(phone-only) { width: auto; }
+  @include for-size(phone-only) {
+    width: auto;
+  }
 
-    @include for-size(desktop-up) { padding: 10em 0; }
+  @include for-size(desktop-up) {
+    padding: 8em 0;
+  }
 }
 
 #banner {
-    @include for-size(phone-only) {
-        width: 85%;
+  @include for-size(phone-only) {
+    width: 85%;
 
-        h2 {
-            font-size: 3.5em;
-            padding-bottom: 0.3em;
-        }
-
-        h4 { font-size: 1.3em; }
-        
-        .button {
-            font-size: 1.3em;
-            @include background-brdradius($button-color, $bor-rad-btn-sm);
-}
+    h2 {
+      font-size: 2.5rem;
+      padding-bottom: 0.3em;
     }
 
-    @include for-size(desktop-up) { width: 1000px; }
+    h4 {
+      font-size: 1.3em;
+    }
+
+    .button {
+      margin-top: 1.25em;
+      padding: 1em 1.25em;
+      font-size: 1em;
+      @include background-brdradius($button-color, $bor-rad-btn-sm);
+    }
+  }
+
+  @include for-size(tablet-portrait-up) {
+    h2 {
+      font-size: 3rem;
+    }
+    .button {
+      margin-top: 1.75em;
+      padding: 1.15em 2em;
+      font-size: 1.3rem;
+    }
+  }
+
+  @include for-size(tablet-landscape-up) {
+    h2 {
+      font-size: 3.5rem;
+    }
+  }
+
+  @include for-size(desktop-up) {
+    width: 1000px;
+    h2 {
+      font-size: 4.5rem;
+    }
+
+    .button {
+      margin-top: 2em;
+      padding: 1.3em 3em;
+      font-size: 1.5rem;
+    }
+  }
 }

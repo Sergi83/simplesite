@@ -27,16 +27,3 @@ const Error = () => {
 };
 
 export default Error;
-
-// <>
-//     <Navbar />
-//     <section className="error-page section">
-//         <div className="error-container">
-//             <h1></h1>
-//             <Link to="/" className="btn btn-primary">
-//             back home
-//             </Link>
-//         </div>
-//     </section>
-//     <Footer />
-// </>

@@ -1,64 +1,71 @@
-
-// * mixins 
+// * mixins
 
 // font-weight and size for h1-5 and buttons
 @mixin fontz($fw, $fz) {
-    font-size: $fz;
-    font-weight: $fw;
+  font-weight: $fw;
+  font-size: $fz;
 }
 
 // position + top
 @mixin pos-top($pos, $top) {
-    position: $pos;
-    top: $top;
+  position: $pos;
+  top: $top;
 }
 
 // float + width
 @mixin float-width($float, $width) {
-    float: $float;
-    width: $width;
+  float: $float;
+  width: $width;
 }
 
 // float + width (calculated) +         text-align;
 // width formula: ('width-main' * 'x%') / ('width-main' + 'width-side')
 @mixin float-text-width($float, $text-a, $w-main, $w-side, $percent) {
-    float: $float;
-    width: (($w-main * $percent) / ($w-main + $w-side));
-    text-align: $text-a;
+  float: $float;
+  width: (($w-main * $percent) / ($w-main + $w-side));
+  text-align: $text-a;
 }
 
 // transition for navbar
-@mixin transition ($tr) {
-    transition: $tr;
-    -webkit-transition: $tr;
-    -moz-transition: $tr;
-    -ms-transition: $tr;
-    -o-transition: $tr;
+@mixin transition($tr) {
+  transition: $tr;
+  -webkit-transition: $tr;
+  -moz-transition: $tr;
+  -ms-transition: $tr;
+  -o-transition: $tr;
 }
 
 // menu button style (+hover)
 @mixin background-brdradius($background, $brdradius) {
-    background-color: $background;
-    border-radius: $brdradius;
+  background-color: $background;
+  border-radius: $brdradius;
 }
 
+// _base.scss button + navbar links
+@mixin display-text-transform-decor($disp, $ttr, $tdec) {
+  display: $disp;
+  text-transform: $ttr;
+  text-decoration: $tdec;
+}
 
 // * media queries (conditions)
 // queue of media queries: should be the same order as in the mixin
 @mixin for-size($size) {
-    @if $size==phone-only {
-        @media (max-width: 649px) { @content; }
+  @if $size==phone-only {
+    @media (max-width: 649px) {
+      @content;
     }
-
-    @else if $size==tablet-portrait-up {
-        @media (min-width: 650px) { @content; }
+  } @else if $size==tablet-portrait-up {
+    @media (min-width: 650px) {
+      @content;
     }
-
-    @else if $size==tablet-landscape-up {
-        @media (min-width: 905px) { @content; }
+  } @else if $size==tablet-landscape-up {
+    @media (min-width: 905px) {
+      @content;
     }
-
-    @else if $size==desktop-up {
-        @media (min-width: 1300px) { @content; }
+  } @else if $size==desktop-up {
+    @media (min-width: 1300px) {
+      @content;
     }
+  }
 }
