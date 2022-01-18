@@ -86,10 +86,18 @@
     .style1 {
       margin: auto 1%;
     }
+
+    .sidebar_1li {
+      padding-top: 0.49em;
+    }
   }
 
   @include for-size(desktop-up) {
     @include float-text-width(right, left, 550px, 800px, 98%);
+
+    .sidebar_1li {
+      padding-top: 0.91em;
+    }
   }
 }
 
