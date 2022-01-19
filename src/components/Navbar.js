@@ -1,12 +1,14 @@
 import React, { useState, useRef, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
-import { linksNavbar } from "../content/homepageContent";
 import logo from "../styles/images/computer_logo_icon.svg";
 
+import { content } from "../content/allContent";
 
 
 export default function Navbar() {
+
+  const { linksNavbar } = content;
 
   // hook for button -> show/hide mobile menu
   const [showLinks, setShowLinks] = useState(false);
