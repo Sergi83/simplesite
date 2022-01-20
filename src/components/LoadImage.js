@@ -1,13 +1,12 @@
 // 
 import { AiFillPicture } from "react-icons/ai";
 
-// TODO: make dynamic images' rendering
 
-// element showing before a image
+// element showing before an image
 export const LoadImage = ({ alt }) => {
   return (
     <div className="image">
-      <AiFillPicture />
+      <AiFillPicture className="imageIcon" />
       <p>{alt}</p>
     </div>
   );

@@ -1,0 +1,87 @@
+@import "../variables_templates";
+@import "../mixins";
+
+
+// about page
+.grid-container {
+
+  text-align: center;
+
+  p {
+    // padding (left, right)
+    @include pad-sides(0.6rem);
+  }
+
+  .imageIcon {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  // button on white background
+  .button {
+    font-size: 1rem;
+    padding: 1.2em 2em;
+  }
+  
+  .toggle_text_overflow {
+    // show three dots (hide text) if text more than two lines
+    @extend %toggle-text-overflow-hidden;
+  }
+
+  // after adding this class to toggle_text_overflow element - showing text of the element
+  .showText {
+      display: block;
+  }
+
+  @include for-size(phone-only) {
+
+    .button {
+      margin-bottom: 3em;
+      padding: 0.75em 1em;
+    }
+    .imageIcon {
+      width: 1.75rem;
+      height: 1.75rem;
+    }
+
+    p {
+        // padding (left, right)
+        @include pad-sides(0);
+    }
+  }
+
+  @include for-size(tablet-portrait-up) {
+    .button {
+      margin: 1.5em 0 4em 0;
+    }
+
+    p {
+        // padding (left, right)
+        @include pad-sides(5rem);
+    }
+  }
+
+  @include for-size(tablet-landscape-up) {
+    
+    h3 {
+      font-size: 3.25rem;
+      margin-bottom: 1em;
+    }
+
+    p {
+        // padding (left, right)
+        @include pad-sides(1rem);
+    }
+
+    .title p {
+        text-align: left;
+    }
+
+    // grid
+    // minmax(min?, max?), gap(?)
+    @include grid-3-column(1.25rem, 10px) {
+        // text-area rows(2): 1) 1-title, 2) 3-column(.box1-3);
+        @include grid-area-3-column;
+    }
+  }
+}

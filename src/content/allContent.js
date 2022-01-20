@@ -63,27 +63,27 @@ export const content = {
   },
   about: {
     title: "About us",
-    subtitle: "Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue",
+    article: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et explicabo consectetur exercitationem dolore doloribus ducimus unde? Accusantium ducimus ratione nostrum tempore cumque, aliquid, deleniti ab sequi quasi tenetur, ea omnis unde esse necessitatibus vel reprehenderit reiciendis dignissimos voluptas atque! Voluptatem quasi cum sit ipsum, eius, ducimus fugiat at corrupti quis totam dignissimos delectus, voluptatum nihil recusandae distinctio odio nulla beatae. Quia iste, aliquam placeat libero consectetur ipsam fugit quasi sint, excepturi molestias nobis reprehenderit earum harum delectus omnis neque nemo laudantium corporis velit officiis saepe cupiditate illum tempora. Deleniti placeat earum sequi ipsam debitis accusantium deserunt. Laudantium amet at neque.Consequuntur deserunt doloribus quisquam debitis voluptatem sunt ea earum eum! Eum consequatur, quis expedita, quaerat veritatis perspiciatis, quibusdam ex illo tempora quos beatae asperiores suscipit laudantium laboriosam provident! Maiores voluptate veniam molestias placeat sed rem asperiores? Possimus vero et porro distinctio eveniet recusandae dolorum earum placeat facere exercitationem, in voluptas rem ad molestias at est blanditiis, voluptatibus aliquam autem eligendi aspernatur? Assumenda.",
     boxes: [
       {
         name: "box1",
         imgAlt: "cloud_icon",
         textP:
-          "Praesent pellentesque facilisis elit. Class aptent taciti sociosqu ad  torquent per conubia nostra.",
+          "Praesent pellentesque facilisis elit. Class aptent taciti sociosqu ad  torquent per conubia nostra. Quia iste, aliquam placeat libero consectetur ipsam fugit quasi sint, excepturi molestias nobis reprehenderit earum harum delectus omnis neque nemo laudantium corporis velit officiis saepe cupiditate illum tempora.",
         buttonLink: "/contact",
       },
       {
         name: "box2",
         imgAlt: "gears_icon",
         textP:
-          "Etiam neque. Vivamus consequat lorem at nisl. Nullam  wisi a sem semper eleifend. Donec mattis.",
+          "Etiam neque. Vivamus consequat lorem at nisl. Nullam  wisi a sem semper eleifend. Donec mattis. Maiores voluptate veniam molestias placeat sed rem asperiores? Possimus vero et porro distinctio eveniet recusandae dolorum earum placeat facere exercitationem, in voluptas rem ad molestias at est blanditiis, voluptatibus aliquam autem eligendi aspernatur?",
         buttonLink: "/contact",
       },
       {
         name: "box3",
         imgAlt: "wrench_icon",
         textP:
-          "Aenean lectus lorem, imperdiet at, ultrices eget, ornare et, wisi. Pellentesque adipiscing purus.",
+          "Aenean lectus lorem, imperdiet at, ultrices eget, ornare et, wisi. Pellentesque adipiscing purus. Voluptatem quasi cum sit ipsum, eius, ducimus fugiat at corrupti quis totam dignissimos delectus, voluptatum nihil recusandae distinctio odio nulla beatae.",
         buttonLink: "/contact",
       },
     ],
