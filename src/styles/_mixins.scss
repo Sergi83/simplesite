@@ -1,4 +1,4 @@
-// * mixins
+// * MIXINS
 
 // font-weight and size for h1-5 and buttons
 @mixin fontz($fw, $fz) {
@@ -47,6 +47,57 @@
   text-transform: $ttr;
   text-decoration: $tdec;
 }
+
+// _about.grid.scss padding (sides)
+@mixin pad-sides ($p-left-right) {
+  padding-left: $p-left-right;
+  padding-right: $p-left-right;
+}
+
+
+// * grid
+
+// AboutContent component
+// text-area: 1title, 3-column(.box1-3); minmax(min?, $max), gap(?)
+@mixin grid-3-column ($minmax, $gap) {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax($minmax, auto);
+  margin: 0 auto;
+  grid-gap: $gap;
+
+  // grid area
+  @content;
+}
+
+// grid for media queries
+// wrapper, containers
+// grid area
+@mixin grid-area-names {
+  .title { grid-area: title; }
+  .box1 { grid-area: box1; }
+  .box2 { grid-area: box2; }
+  .box3 { grid-area: box3; }
+}
+
+@mixin grid-area-3-column {
+  grid-template-areas:
+    "title title title"
+    "box1 box2 box3";
+
+  @include grid-area-names;
+}
+
+@mixin grid-area-1-column {
+  grid-template-areas:
+    "title title title"
+    "box1 box1 box1"
+    "box2 box2 box2"
+    "box3 box3 box3";
+
+  @include grid-area-names;
+}
+
 
 // * media queries (conditions)
 // queue of media queries: should be the same order as in the mixin

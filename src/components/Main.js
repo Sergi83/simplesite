@@ -6,10 +6,14 @@ import imageMain from "../styles/images/key_type.jpg";
 import ProgressiveImage from "react-progressive-graceful-image";
 import { AiFillPicture } from "react-icons/ai";
 
-import mainTextContent from "../content/mainContent";
+// content
+import { content } from "../content/allContent";
 
 
 const Main = () => {
+
+  const { main } = content;
+  const { title, subtitle, mainTextContent } = main;
 
   // element showing before a image
   const loadingImage = () => {
@@ -27,9 +31,9 @@ const Main = () => {
         <div id="main_sidebar_content">
           <br />
           <div className="title">
-            <h3>Welcome to our website</h3>
+            <h3>{title}</h3>
             <br />
-            <span className="byline">Mauris vulputate dolor sit amet nibh</span>
+            <span className="byline">{subtitle}</span>
           </div>
           <br />
 

@@ -16,6 +16,8 @@ $banner-links-color: rgba(255, 255, 255, 5);
 $banner-links-hover: rgba(255, 255, 255, 0.3);
 
 $button-color: #1757ae;
+$button-hover: #1e3a61;
+
 
 $byline-color: #a7a3a3;
 $underline-color: #d1cfce;
@@ -62,4 +64,15 @@ $transition-nav: all 0.3s linear;
     padding-top: 0;
     border-top: 0;
   }
+}
+
+// toggle text overflow
+%toggle-text-overflow-hidden {
+  // show three dots (hide text) if text more than two lines
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
 }

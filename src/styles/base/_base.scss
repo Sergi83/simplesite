@@ -98,4 +98,8 @@ h5 {
   @include display-text-transform-decor(inline-block, uppercase, none);
   @include fontz($font-bold, 1.5rem);
   @include background-brdradius($button-color, $bor-rad-btn-lg);
+
+  &:hover {
+    background-color: $button-hover;
+  }
 }
