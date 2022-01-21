@@ -1,0 +1,120 @@
+@import "../variables_templates";
+@import "../mixins";
+
+
+
+.header-clients {
+  color: $h5-color;
+}
+
+.review {
+  padding: 1.5rem 2rem;
+  text-align: center;
+  box-shadow: $box-shadows-main;
+
+  @include background-brdradius($a-color-hover, $bor-rad-card);
+
+  @include transition($transition-nav);
+
+  &:hover {
+    box-shadow: $box-shadows-hov;
+  }
+}
+
+.client-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.img-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 10%;
+  margin-bottom: 1.5rem;
+  border-radius: 50%;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: -0.25rem;
+    right: -0.5rem;
+    @include background-brdradius($a-color, $bor-rad-icon);
+  }
+}
+
+.client-img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.quote-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 2.5rem;
+  height: 2.5rem;
+
+  display: grid;
+  place-items: center;
+  transform: translateY(25%);
+
+  @include background-brdradius($byline-color, $bor-rad-icon);
+
+  color: $h3-color;
+}
+
+.info-container {
+  //
+
+  .job {
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    margin: 1% 0;
+  }
+
+  .info-p {
+    text-align: left;
+  }
+}
+
+.info {
+  margin-bottom: 0.75rem;
+}
+
+.prev-btn,
+.next-btn {
+  cursor: pointer;
+  font-size: 1.25rem;
+  color: $color-white;
+  background: transparent;
+  border-color: transparent;
+  margin: 0 1rem;
+  @include transition($transition-nav);
+
+  &:hover,
+  &:hover {
+    color: $byline-color;
+  }
+}
+
+.random {
+  margin-top: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  text-transform: capitalize;
+  font-size: 1rem;
+  cursor: pointer;
+
+  @include transition($transition-nav);
+}

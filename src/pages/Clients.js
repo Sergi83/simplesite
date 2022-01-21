@@ -1,28 +1,17 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 
 // components
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import { ClientsContent } from "../components/ClientsContent";
+
 // layout
-import MainLayout from "../components/layouts/MainLayout";
+import { PageLayout } from "../components/layouts/PageLayout";
 
 const Clients = () => {
   return (
-    <>
-      <MainLayout>
-        <Navbar />
-        <div className="content">
-          <br />
-          <div className="title">
-            <h3>[Our Clients]</h3>
-            <br />
-            <article>[some text]</article>
-          </div>
-        </div>
-      </MainLayout>
-      <Footer />
-    </>
+    <PageLayout>
+      <h2 className="header-clients" >Our Clients</h2>
+      <ClientsContent/>
+    </PageLayout>
   );
 };
 

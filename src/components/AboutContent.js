@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
 
 import { content } from "../content/allContent";
 import { LoadImage } from "./LoadImage";
@@ -8,20 +7,19 @@ import { ImageIcon } from "./ImageIcon";
 
 const AboutContent = () => {
   // get data object from content
-  const { about } = content;
-  const { title, article, boxes } = about;
+  const {
+    about: { title, article, boxes },
+  } = content;
 
-// 
-const [ showText, setShowText ] = useState(true);
+  /**
+   * hook + function -> onClick toggle text
+   */
+  const [showText, setShowText] = useState(false);
 
-const toggleText = (e) => {
-      e.preventDefault();
-      setShowText(showText => !showText);
+  const toggleText = (e) => {
+    e.preventDefault();
+    setShowText((showText) => !showText);
   };
-// useEffect((e) => {
-    
-// }, [showText]);
-  
 
   return (
     <div className="grid-container content">
@@ -34,14 +32,12 @@ const toggleText = (e) => {
       {boxes.map(({ name, imgAlt, textP }, index) => {
         return (
           <div className={name} key={index}>
-            <br/>
-            {imgAlt ? (
-              <ImageIcon alt={imgAlt} />
-            ) : (
-              <LoadImage alt={imgAlt} />
-            )}
-        
-            <p className={showText ? "showText" : "toggle_text_overflow"}>{textP}</p>
+            <br />
+            {imgAlt ? <ImageIcon alt={imgAlt} /> : <LoadImage alt={imgAlt} />}
+
+            <p className={showText ? "showText" : "toggle_text_overflow"}>
+              {textP}
+            </p>
             <button onClick={toggleText} className="button">
               More Info
             </button>

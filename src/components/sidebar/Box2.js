@@ -1,9 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { sidebarBox2 } from "../../content/sidebarContent";
+
+import { content } from "../../content/allContent";
+
 
 export const Box2 = () => {
-  const { boxTitle, textLinks } = sidebarBox2;
+  const { sidebar: { box2 } } = content;
+  const { boxTitle, textLinks } = box2;
+  
   return (
     <div className="sbox2">
       <h5>{boxTitle}</h5>
