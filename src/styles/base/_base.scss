@@ -93,6 +93,12 @@ h5 {
   }
 }
 
+button {
+  border: 0;
+  color: $color-white;
+}
+
+
 .button {
 
   @include display-text-transform-decor(inline-block, uppercase, none);
@@ -100,6 +106,6 @@ h5 {
   @include background-brdradius($button-color, $bor-rad-btn-lg);
 
   &:hover {
-    background-color: $button-hover;
+    background: $button-hover;
   }
 }

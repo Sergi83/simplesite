@@ -39,7 +39,7 @@ const Banner = () => {
           {bannerTextContent(externalLinks, subtitle)}
           <br />
           <Link to={buttonLink} className="button">
-            Link to Contact
+            Contact
           </Link>
         </div>
       </div>

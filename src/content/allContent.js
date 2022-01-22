@@ -61,9 +61,47 @@ export const content = {
       "Donec condimentum, urna non molestie semper, ligula enim ornare nibh, quis laoreet eros quam eget ante. Aliquam libero. Vivamus nisl nibh, iaculis vitae, viverra sit amet, ullamcorper vitae, turpis. Aliquam erat volutpat. Vestibulum dui sem, pulvinar sed, imperdiet nec, iaculis nec, leo. Fusce odio. Etiam arcu dui, faucibus eget, placerat vel, sodales eget, orci. Donec ornare neque ac sem. Mauris aliquet. Aliquam sem leo, vulputate sed, convallis at, ultricies quis, justo. Donec nonummy magna quis risus. Quisque eleifend. Phasellus tempor vehicula justo.",
     ],
   },
+  sidebar: {
+    style1: [
+      {
+        title: "Amet sed volutpat mauris",
+        textLink:
+          "In posuere eleifend odio. Quisque semper augue mattis wisi. Pellentesque viverra vulputate enim. Aliquam erat volutpat.",
+      },
+      {
+        title: "Sagittis diam dolor sit amet",
+        textLink:
+          "In posuere eleifend odio. Quisque semper augue mattis wisi. Pellentesque viverra vulputate enim. Aliquam erat volutpat.",
+      },
+      {
+        title: "Maecenas ac quam risus",
+        textLink:
+          "In posuere eleifend odio. Quisque semper augue mattis wisi. Pellentesque viverra vulputate enim. Aliquam erat volutpat.",
+      },
+    ],
+    box1: {
+      boxTitle: "Etiam rhoncus",
+      textLinks: [
+        "Semper quis egetmi dolore",
+        "Quam turpis feugiat dolor",
+        "Amet ornare hendrerit lectus",
+        "Quam turpis feugiat dolor",
+      ],
+    },
+    box2: {
+      boxTitle: "Integer gravida",
+      textLinks: [
+        "Semper quis egetmi dolore",
+        "Quam turpis feugiat dolor",
+        "Consequat lorem phasellus",
+        "Amet ornare hendrerit lectus",
+      ],
+    },
+  },
   about: {
     title: "About us",
-    article: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et explicabo consectetur exercitationem dolore doloribus ducimus unde? Accusantium ducimus ratione nostrum tempore cumque, aliquid, deleniti ab sequi quasi tenetur, ea omnis unde esse necessitatibus vel reprehenderit reiciendis dignissimos voluptas atque! Voluptatem quasi cum sit ipsum, eius, ducimus fugiat at corrupti quis totam dignissimos delectus, voluptatum nihil recusandae distinctio odio nulla beatae. Quia iste, aliquam placeat libero consectetur ipsam fugit quasi sint, excepturi molestias nobis reprehenderit earum harum delectus omnis neque nemo laudantium corporis velit officiis saepe cupiditate illum tempora. Deleniti placeat earum sequi ipsam debitis accusantium deserunt. Laudantium amet at neque.Consequuntur deserunt doloribus quisquam debitis voluptatem sunt ea earum eum! Eum consequatur, quis expedita, quaerat veritatis perspiciatis, quibusdam ex illo tempora quos beatae asperiores suscipit laudantium laboriosam provident! Maiores voluptate veniam molestias placeat sed rem asperiores? Possimus vero et porro distinctio eveniet recusandae dolorum earum placeat facere exercitationem, in voluptas rem ad molestias at est blanditiis, voluptatibus aliquam autem eligendi aspernatur? Assumenda.",
+    article:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et explicabo consectetur exercitationem dolore doloribus ducimus unde? Accusantium ducimus ratione nostrum tempore cumque, aliquid, deleniti ab sequi quasi tenetur, ea omnis unde esse necessitatibus vel reprehenderit reiciendis dignissimos voluptas atque! Voluptatem quasi cum sit ipsum, eius, ducimus fugiat at corrupti quis totam dignissimos delectus, voluptatum nihil recusandae distinctio odio nulla beatae. Quia iste, aliquam placeat libero consectetur ipsam fugit quasi sint, excepturi molestias nobis reprehenderit earum harum delectus omnis neque nemo laudantium corporis velit officiis saepe cupiditate illum tempora. Deleniti placeat earum sequi ipsam debitis accusantium deserunt. Laudantium amet at neque.Consequuntur deserunt doloribus quisquam debitis voluptatem sunt ea earum eum! Eum consequatur, quis expedita, quaerat veritatis perspiciatis, quibusdam ex illo tempora quos beatae asperiores suscipit laudantium laboriosam provident! Maiores voluptate veniam molestias placeat sed rem asperiores? Possimus vero et porro distinctio eveniet recusandae dolorum earum placeat facere exercitationem, in voluptas rem ad molestias at est blanditiis, voluptatibus aliquam autem eligendi aspernatur? Assumenda.",
     boxes: [
       {
         name: "box1",

@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import logo from "../styles/images/computer_logo_icon.svg";
 
@@ -36,7 +36,7 @@ export default function Navbar() {
         <div className="nav-header">
 
           {/* logo */}
-          <img src={logo} alt="logo" className="logo" />
+          <Link to="/"><img src={logo} alt="logo" className="logo" /></Link>
 
           {/* button -> show/hide mobile menu */}
           <button

@@ -1,12 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { sidebarStyle1TextContent } from "../../content/sidebarContent";
+import { content } from "../../content/allContent";
 
 const SidebarStyle1 = () => {
+
+  // get data
+  const { sidebar } = content;
+  const { style1 } = sidebar;
+
   return (
     <ul className="style1">
-      {sidebarStyle1TextContent.map((liItem, index) => {
+      {style1.map((liItem, index) => {
         return (
           <li key={index}>
             <h5 className={(index === 0) ? "sidebar_1li" : ""}>{liItem.title}</h5>

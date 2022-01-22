@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { sidebarBox1 } from "../../content/sidebarContent";
+import { content } from "../../content/allContent";
 
 export const Box1 = () => {
-  const { boxTitle, textLinks } = sidebarBox1;
+  const { sidebar: { box1 } } = content;
+  const { boxTitle, textLinks } = box1;
   return (
     <div className="sbox1">
       <h5>{boxTitle}</h5>
