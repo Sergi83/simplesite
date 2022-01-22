@@ -93,7 +93,7 @@ export const ClientsContent = () => {
           <div className="info-p">
             <p>{gender}</p>
             <p>{date_of_birth}</p>
-            <p>{email}</p>
+            <p className="email">{email}</p>
           </div>
 
           

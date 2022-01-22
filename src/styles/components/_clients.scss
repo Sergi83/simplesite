@@ -43,7 +43,7 @@
     position: absolute;
     top: -0.25rem;
     right: -0.5rem;
-    @include background-brdradius($a-color, $bor-rad-icon);
+    @include background-brdradius($color-white, $bor-rad-icon);
   }
 }
 
@@ -68,13 +68,16 @@
   place-items: center;
   transform: translateY(25%);
 
-  @include background-brdradius($byline-color, $bor-rad-icon);
+  color: $color-white;
 
-  color: $h3-color;
+  @include background-brdradius($byline-color, $bor-rad-icon);
 }
 
 .info-container {
   //
+  .author {
+    margin-bottom: 0.25rem;
+  }
 
   .job {
     margin-bottom: 0.75rem;
@@ -87,6 +90,11 @@
   .info-p {
     text-align: left;
   }
+}
+
+.email {
+    color: $underline-color;
+    text-decoration: underline;
 }
 
 .info {

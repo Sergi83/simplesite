@@ -106,6 +106,6 @@ button {
   @include background-brdradius($button-color, $bor-rad-btn-lg);
 
   &:hover {
-    background-color: $button-hover;
+    background: $button-hover;
   }
 }
